@@ -1,20 +1,21 @@
 #!/usr/bin/env python3
-"""This module defines wait_n"""
+"""This module defines task_wait_n"""
 import asyncio
 from typing import List
 
-task_wait_n = __import__('4-tasks').task_wait_n
+task_wait_random = __import__('3-tasks').task_wait_random
 
 
-async def wait_n(n: int, max_delay: int) -> List[float]:
-    """This method creates a list of n elements using async"""
+async def task_wait_n(n: int, max_delay: int) -> List[float]:
+    """Create a list of n elements using async with task_wait_random"""
 
     rand_list = []
-    temp = []
+    tasks = []
 
     for i in range(n):
-        temp.append(asyncio.create_task(task_wait_n(max_delay)))
-    for number in asyncio.as_completed(temp):
-        rand_list.append(await number)
+        tasks.append(task_wait_random(max_delay))
+
+    for task in asyncio.as_completed(tasks):
+        rand_list.append(await task)
 
     return sorted(rand_list)
