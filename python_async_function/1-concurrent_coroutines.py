@@ -12,7 +12,7 @@ async def wait_n(n: int, max_delay: int) -> list[float]:
     num_list: list = []
     inserted = False
     for i in range(n):
-        rand = await wait_random(max_delay)
+        rand: float = await wait_random(max_delay)
         inserted = False
         if not num_list:
             num_list.append(rand)
