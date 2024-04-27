@@ -2,9 +2,10 @@
 """This module defines async_generator method"""
 import asyncio
 import random
+from typing import AsyncGenerator
 
 
-async def async_generator():
+async def async_generator() -> AsyncGenerator[int, None]:
     """This method generates random numbers from 0 - 10"""
 
     for i in range(10):
