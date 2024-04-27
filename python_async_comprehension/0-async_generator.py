@@ -7,6 +7,6 @@ import random
 async def async_generator():
     """This method generates random numbers from 0 - 10"""
 
-    for _ in range(10):
+    async for _ in range(10):
         await asyncio.create_task(asyncio.sleep(1))
         yield random.randint(0, 10)
