@@ -11,4 +11,4 @@ async def async_generator():
         random_num = random.randint(0, 10)
         await asyncio.sleep(1)
         rand_list.append(random_num)    
-    return rand_list
+    yield rand_list
