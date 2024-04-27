@@ -4,7 +4,7 @@ import asyncio
 import random
 
 
-async def wait_random(max_delay: int = 10):
+async def wait_random(max_delay: int = 10) -> float:
     """This method waits for rand_num then returns it"""
 
     rand_num = random.uniform(0.0, float(max_delay))
