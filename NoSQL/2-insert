@@ -1,6 +1,6 @@
 // This is a comment
 db.movies.insertOne(
-  {
-    name: “Holberton school”
-  }
+{
+name: “Holberton school”
+}
 )
