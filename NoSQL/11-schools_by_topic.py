@@ -6,7 +6,7 @@ import pymongo
 def schools_by_topic(mongo_collection, topic):
     """This method returns the list of school having a specific topic"""
 
-    data = mongo_collection.find(topic)
+    data = mongo_collection.find({"topics": topic})
     if data.count() == 0:
         return []
     else:
