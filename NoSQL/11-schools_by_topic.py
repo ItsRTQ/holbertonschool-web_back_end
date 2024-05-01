@@ -2,6 +2,7 @@
 """This module defines school_by_topic"""
 import pymongo
 
+
 def schools_by_topic(mongo_collection, topic):
     """This method returns the list of school having a specific topic"""
 
