@@ -27,5 +27,4 @@ def get_nginx_logs_stats(mongo_uri):
 if __name__ == "__main__":
     mongo_uri = 'mongodb://localhost:27017'
 
-    print("Stats:")
     get_nginx_logs_stats(mongo_uri)
