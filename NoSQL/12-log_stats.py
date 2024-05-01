@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
 import pymongo
 
+
 def get_nginx_logs_stats(mongo_uri):
+    """This method creates a mongo client and prints data"""
+
     client = pymongo.MongoClient(mongo_uri)
     
     db = client['logs']
