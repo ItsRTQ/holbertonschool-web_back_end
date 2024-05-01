@@ -1,6 +1,6 @@
 // This is a comment
-db.movies.insert(
+db.school.insert(
 {
-name: “Holberton school”
+name:"Holberton school"
 }
 )
