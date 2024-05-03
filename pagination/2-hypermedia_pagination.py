@@ -65,4 +65,3 @@ class Server:
             "total_pages": len(self.dataset())
         }
         return data_format
-    
