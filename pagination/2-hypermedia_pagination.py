@@ -49,7 +49,7 @@ class Server:
 
         data = self.get_page(page, page_size)
         if len(self.get_page(len(data), page_size)) > 0:
-            next_pages = self.get_page(len(data), page_size)
+            next_pages = self.get_page(len(data), len(self.dataset()))
         else:
             next_pages = None
         if page > 1:
