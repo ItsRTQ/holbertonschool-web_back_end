@@ -48,6 +48,7 @@ class Server:
         """This method returns a dictionary with data from dataset"""
 
         data = self.get_page(page, page_size)
+        total_pages = math.ceil(len(self.dataset()) / page_size)
         if len(self.get_page(len(data), len(self.dataset()))) > 0:
             next_pages = self.get_page(len(data), len(self.dataset()))
         else:
@@ -62,6 +63,6 @@ class Server:
             "data": data,
             "next_page": next_pages,
             "prev_page": prev_pages,
-            "total_pages": len(self.dataset())
+            "total_pages": total_pages
         }
         return data_format
