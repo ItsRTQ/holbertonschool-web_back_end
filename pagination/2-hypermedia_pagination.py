@@ -2,7 +2,7 @@
 """This module defines index_range and class Server"""
 import csv
 import math
-from typing import List
+from typing import List, Dict
 
 
 def index_range(page, page_size):
@@ -44,7 +44,7 @@ class Server:
         desired_pages = index_range(page, page_size)
         return data[desired_pages[0]:desired_pages[1]]
 
-    def get_hyper(self, page: int = 1, page_size: int = 10) -> dict:
+    def get_hyper(self, page: int = 1, page_size: int = 10) -> Dict:
         """This method returns a dictionary with data from dataset"""
 
         total_pages = math.ceil(len(self.dataset()) / page_size)
@@ -58,7 +58,7 @@ class Server:
             prev_pages = None
         data = self.get_page(page, page_size)
         data_format = {
-            "page_size": len(data),
+            "page_size": page_size,
             "page": page,
             "data": data,
             "next_page": next_pages,
