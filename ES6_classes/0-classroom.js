@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 export default class ClassRoom {
     /**
      * Implementing class named ClassRoom
