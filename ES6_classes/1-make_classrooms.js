@@ -1,6 +1,6 @@
 import ClassRoom from "./0-classroom.js";
 
-function initializeRooms() {
+export default function initializeRooms() {
   /**
    * Creates function @see {initializeRooms}
    * Returns rooms array
