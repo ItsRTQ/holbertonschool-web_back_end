@@ -32,13 +32,13 @@ export default class Pricing {
   }
 
   displayFullPrice() {
-    format = `${this._amount} ${this._currency.name} (${this._currency.code})`;
+    const format = `${this._amount} ${this._currency.name} (${this._currency.code})`;
     return format;
   }
 
   static convertPrice(amount, conversionRate) {
     if (typeof amount !== 'number') throw TypeError('amount must be a number');
     if (typeof conversionRate !== 'number') throw TypeError('conversionRate must be a number');
-    return amount * conversionRate
+    return amount * conversionRate;
   }
 }
