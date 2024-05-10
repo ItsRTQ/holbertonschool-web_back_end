@@ -1,7 +1,6 @@
-#!/usr/bin/env node
 export default class ClassRoom {
     /**
-     * Implementing class named ClassRoom
+     * Creates a new @see {@link ClassRoom}
      * @param {Number} maxStudentsSize - Maximum number of students
      */
     constructor(maxStudentsSize) {
