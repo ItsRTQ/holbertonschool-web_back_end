@@ -16,8 +16,8 @@ export default class Airport {
   }
 
   set name(value) {
-    if (typeof value !== 'string') throw TypeError('name must be string')
-    this._name = value
+    if (typeof value !== 'string') throw TypeError('name must be string');
+    this._name = value;
   }
 
   get code() {
@@ -25,11 +25,11 @@ export default class Airport {
   }
 
   set code(value) {
-    if (typeof value !== 'string') throw TypeError('code must be string')
-    this._code = value
+    if (typeof value !== 'string') throw TypeError('code must be string');
+    this._code = value;
   }
 
   toString() {
-    return this._code;
+    return `[object ${this._code}]`;
   }
 }
