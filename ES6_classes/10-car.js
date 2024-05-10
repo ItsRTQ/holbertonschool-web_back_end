@@ -6,9 +6,6 @@ export default class Car {
    * @param {String} color - color of the car
    */
   constructor(brand, motor, color) {
-    if (typeof brand !== 'string' || typeof motor !== 'string' || typeof color !== 'string') {
-      throw TypeError('Brand, Motor, and color of car must be type string');
-    }
     this._brand = brand;
     this._motor = motor;
     this._color = color;
