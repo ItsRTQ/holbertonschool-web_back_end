@@ -6,6 +6,9 @@ export default class HolbertonCourse {
    * @param {String[]} students - Students name
    */
   constructor(name, length, students) {
+   if (typeof value !== 'string') throw new TypeError('Name must be a string');
+   if (typeof value !== 'number') throw new TypeError('Length must be a number');
+   if (!Array.isArray(values)) throw new TypeError('Students must be a Array');
    this._name = name;
    this._length = length;
    this._students = students;
