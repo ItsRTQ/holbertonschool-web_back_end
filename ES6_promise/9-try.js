@@ -5,9 +5,9 @@ export default function guardrail(mathFunction) {
     result = mathFunction();
     queue.push(result);
   } catch(err) {
-    queue.push(String(err));
+    queue.push(err);
   } finally {
     queue.push(msg);
-    return queue;
   }
+  return queue;
 }
