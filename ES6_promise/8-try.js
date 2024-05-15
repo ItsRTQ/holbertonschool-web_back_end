@@ -1,9 +1,7 @@
 export default function divideFunction(numerator, denominator) {
-    try {
-        const result = numerator / denominator;
-    } catch {
-        throw TypeError('cannot divide by 0');
-    } finally {
-        return result;
-    }
+  if (denominator === 0) {
+    throw new TypeError('cannot divide by 0');
+  } else {
+    return numerator / denominator;
+  }
 }
